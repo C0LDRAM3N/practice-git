@@ -9,7 +9,7 @@ else
 	git add .
 	git commit -m "Modifications for $(date +'%m-%d-%Y')"
 	var=$(git push origin >> "./logs/$(date +'%m-%d-%Y')".txt)
-	# echo $var
+	echo $var
 	# echo "$(git push origin)" >> "./logs/$(date +'%m-%d-%Y')".txt
 
 fi
