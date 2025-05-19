@@ -11,15 +11,7 @@ if [ -z "$(git status --porcelain)" ]; then
 
 else
 	echo -e "Changes were found on $(date)\n" >> "$write".txt
-	add=$( (git add .) 2>&1)
-	commit=$( (git commit -m "Modifications for $destination") 2>&1)
-	push=$( (git push origin  --progress) 2>&1)
-
-	echo -e "Adding the changed files to git\n" >> "$write".txt
-	echo -e "$add\n" >> "$write".txt
-	echo -e "Commiting the changes to git\n" >> "$write".txt
-	echo -e "$commit\n" >> "$write".txt
-	echo -e "Pushing to the repository\n" >> "$write".txt
-	echo -e "$push\n" >> "$write".txt
-
+	git add .
+	git commit -m "Modifications for $destination"
+	git push origin  --progress
 fi
