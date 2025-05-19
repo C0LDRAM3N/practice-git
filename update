@@ -1,8 +1,7 @@
 #!/bin/bash
 
 destination="$(date +'%m-%d-%Y')"
-echo $destination
-echo "./logs/$destination"
+write="./logs/$destination"
 if [ -z "$(git status --porcelain)" ]; then
 	echo "No changes to commit."
 	echo "Checked for changes at $(date)" >> "./logs/$destination".txt
@@ -25,7 +24,7 @@ else
 	# echo "end of var"
 
 
-	echo "Adding the changed files to git\n"
+	echo "Adding the changed files to git\n" >> "$write".txt
 	echo "$add" >> "./logs/$destination".txt
 	echo "Commiting the changes to git\n"
 	echo "$commit" >> "./logs/$destination".txt
