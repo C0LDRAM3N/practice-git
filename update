@@ -1,17 +1,21 @@
 #!/bin/bash
 
+destination="$(date +'%m-%d-%Y')"
+
 if [ -z "$(git status --porcelain)" ]; then
 	echo "No changes to commit."
-	echo "Checked for changes at $(date)" >> "./logs/$(date +'%m-%d-%Y')".txt
+	echo "Checked for changes at $(date)" >> "./logs/$(destination)".txt
 	# git add .
 	# git commit -m "Log modification before proper update"
 else
-	git add .
-	git commit -m "Modifications for $(date +'%m-%d-%Y')"
-	var=$( (git push origin  --progress) 2>&1)
-	echo "var = $var"
-	echo "end of var"
-	echo "$var" >> "./logs/$(date +'%m-%d-%Y')".txt
-	# echo "$(git push origin)" >> "./logs/$(date +'%m-%d-%Y')".txt
+	add=$( (git add .) 2>&1)
+	commit=$( (git commit -m "Modifications for $(destination)") 2>&1)
+	push=$( (git push origin  --progress) 2>&1)
+	# echo "var = $var"
+	# echo "end of var"
+
+	echo "$commit" >> "./logs/$(destination)".txt
+	echo "$push" >> "./logs/$(destination)".txt
+	# echo "$(git push origin)" >> "$(destination)".txt
 
 fi
