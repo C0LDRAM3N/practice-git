@@ -5,7 +5,7 @@ if [ -z "$(git status --porcelain)" ]; then
 	exit 0
 else
 	git add .
-	git commit -m "Modifications !"
+	git commit -m "Modifications for $(date)"
 	git push origin
 
 fi
