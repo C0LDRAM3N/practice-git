@@ -3,20 +3,14 @@
 destination="$(date +'%m-%d-%Y')"
 write="./logs/$destination"
 if [ -z "$(git status --porcelain)" ]; then
-	echo "No changes to commit."
-	echo "Checked for changes at $(date)" >> "$write".txt
-	add=$( (git add .) 2>&1)
-	commit=$( (git commit -m "Log modification before proper update") 2>&1)
-	push=$( (git push origin --progress) 2>&1)
-
-	echo -e "Adding the changed files to git\n" >> "$write".txt
-	echo -e "$add\n" >> "$write".txt
-	echo -e "Commiting the changes to git\n" >> "$write".txt
-	echo -e "$commit\n" >> "$write".txt
-	echo -e "Pushing to the repository\n" >> "$write".txt
-	echo -e "$push\n" >> "$write".txt
+	echo "No changes to commit." >> "$write".txt
+	echo -e "Checked for changes at $(date)\n" >> "$write".txt
+	git add .
+	git commit -m "Log modification before proper update"
+	git push origin --progress
 
 else
+	echo -e "Changes were found on $(date)\n" >> "$write".txt
 	add=$( (git add .) 2>&1)
 	commit=$( (git commit -m "Modifications for $destination") 2>&1)
 	push=$( (git push origin  --progress) 2>&1)
