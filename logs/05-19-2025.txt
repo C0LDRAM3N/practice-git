@@ -45,3 +45,25 @@ To https://github.com/C0LDRAM3N/practice-git.git
 
 Changes were found on Mon May 19 10:41:56 PDT 2025
 
+Adding the changed files to git
+
+
+
+Commiting the changes to git
+
+[master f6ee6ad] Modifications for 05-19-2025
+ 1 file changed, 24 insertions(+)
+
+Pushing to the repository
+
+Enumerating objects: 7, done.
+Counting objects:  14% (1/7)Counting objects:  28% (2/7)Counting objects:  42% (3/7)Counting objects:  57% (4/7)Counting objects:  71% (5/7)Counting objects:  85% (6/7)Counting objects: 100% (7/7)Counting objects: 100% (7/7), done.
+Delta compression using up to 20 threads
+Compressing objects:  33% (1/3)Compressing objects:  66% (2/3)Compressing objects: 100% (3/3)Compressing objects: 100% (3/3), done.
+Writing objects:  25% (1/4)Writing objects:  50% (2/4)Writing objects:  75% (3/4)Writing objects: 100% (4/4)Writing objects: 100% (4/4), 1.13 KiB | 1.13 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/C0LDRAM3N/practice-git.git
+   3f356ca..f6ee6ad  master -> master
+
+Changes were found on Mon May 19 10:42:05 PDT 2025
+
