@@ -4,32 +4,28 @@ destination="$(date +'%m-%d-%Y')"
 write="./logs/$destination"
 if [ -z "$(git status --porcelain)" ]; then
 	echo "No changes to commit."
-	echo "Checked for changes at $(date)" >> "./logs/$destination".txt
+	echo "Checked for changes at $(date)" >> "$write".txt
 	add=$( (git add .) 2>&1)
 	commit=$( (git commit -m "Log modification before proper update") 2>&1)
 	push=$( (git push origin --progress) 2>&1)
 
-	echo "Adding the changed files to git" >> "$write".txt
-	echo "$add" >> "$write".txt
-	echo "Commiting the changes to git" >> "$write".txt
-	echo "$commit" >> "$write".txt
-	echo "Pushing to the repository" >> "$write".txt
-	echo "$push" >> "$write".txt
+	echo -e "Adding the changed files to git\n" >> "$write".txt
+	echo -e "$add\n" >> "$write".txt
+	echo -e "Commiting the changes to git\n" >> "$write".txt
+	echo -e "$commit\n" >> "$write".txt
+	echo -e "Pushing to the repository\n" >> "$write".txt
+	echo -e "$push\n" >> "$write".txt
 
 else
 	add=$( (git add .) 2>&1)
 	commit=$( (git commit -m "Modifications for $destination") 2>&1)
 	push=$( (git push origin  --progress) 2>&1)
 
-	# echo "var = $var"
-	# echo "end of var"
-
-
-	echo "Adding the changed files to git" >> "$write".txt
-	echo "$add" >> "$write".txt
-	echo "Commiting the changes to git" >> "$write".txt
-	echo "$commit" >> "$write".txt
-	echo "Pushing to the repository" >> "$write".txt
-	echo "$push" >> "$write".txt
+	echo -e "Adding the changed files to git\n" >> "$write".txt
+	echo -e "$add\n" >> "$write".txt
+	echo -e "Commiting the changes to git\n" >> "$write".txt
+	echo -e "$commit\n" >> "$write".txt
+	echo -e "Pushing to the repository\n" >> "$write".txt
+	echo -e "$push\n" >> "$write".txt
 
 fi
