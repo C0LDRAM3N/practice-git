@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ -z "$(git status --porcelain)" ]; then
+	echo "No changes to commit."
+	exit 0
+else
+	git add .
+	git commit -m "Modifications !"
+	git push origin
+
+fi
