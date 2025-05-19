@@ -11,6 +11,7 @@ else
 	var=$( (git push origin  --progress) 2>&1)
 	echo "var = $var"
 	echo "end of var"
+	echo "$var" >> "./logs/$(date +'%m-%d-%Y')".txt
 	# echo "$(git push origin)" >> "./logs/$(date +'%m-%d-%Y')".txt
 
 fi
