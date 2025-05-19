@@ -9,3 +9,16 @@ Writing objects:  20% (1/5)Writing objects:  40% (2/5)Writing objects:  60% (3
 Total 5 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
 To https://github.com/C0LDRAM3N/practice-git.git
    3f53a5b..d925f1a  master -> master
+./update: line 12: destination: command not found
+[master d4e82dc] Modifications for
+ 2 files changed, 12 insertions(+), 1 deletion(-)
+ create mode 100644 logs/.txt
+Enumerating objects: 8, done.
+Counting objects:  12% (1/8)Counting objects:  25% (2/8)Counting objects:  37% (3/8)Counting objects:  50% (4/8)Counting objects:  62% (5/8)Counting objects:  75% (6/8)Counting objects:  87% (7/8)Counting objects: 100% (8/8)Counting objects: 100% (8/8), done.
+Delta compression using up to 20 threads
+Compressing objects:  20% (1/5)Compressing objects:  40% (2/5)Compressing objects:  60% (3/5)Compressing objects:  80% (4/5)Compressing objects: 100% (5/5)Compressing objects: 100% (5/5), done.
+Writing objects:  20% (1/5)Writing objects:  40% (2/5)Writing objects:  60% (3/5)Writing objects:  80% (4/5)Writing objects: 100% (5/5)Writing objects: 100% (5/5), 882 bytes | 882.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas:   0% (0/1)        remote: Resolving deltas: 100% (1/1)        remote: Resolving deltas: 100% (1/1), completed with 1 local object.        
+To https://github.com/C0LDRAM3N/practice-git.git
+   d925f1a..d4e82dc  master -> master

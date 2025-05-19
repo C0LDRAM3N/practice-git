@@ -2,6 +2,7 @@
 
 destination="$(date +'%m-%d-%Y')"
 echo $destination
+echo "./logs/$destination"
 if [ -z "$(git status --porcelain)" ]; then
 	echo "No changes to commit."
 	echo "Checked for changes at $(date)" >> "./logs/$(destination)".txt
